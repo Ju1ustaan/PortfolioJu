@@ -2,7 +2,7 @@
     display: flex;
 }
 .project__warpper-left{
-    padding: 100px 0 100px 70px;
+    padding: 50px 0 132px 70px;
     background-image: url("../assets/project__bg.png");
     background-size: cover;
     background-position: center;
@@ -26,11 +26,9 @@
 .project__link{
     margin-bottom: 45px;
 }
-/* .project__link:hover{
-    background: linear-gradient(108.22deg, #FBFF41 -0.67%, #EC00E2 100%);
-} */
+
 .project__warpper-right{
-    padding: 100px 10px;
+    padding: 50px 10px;
     width: 62.5%;
     background-color: #FFFAD0;
 }

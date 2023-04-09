@@ -3,29 +3,29 @@ import './Contact.css'
 
 const Contact = () => {
   return (
-    <section class="contact">
-    <div class="container">
-        <div class="contact__wrapper">
-            <h2 class="contact__title animate__animated animate__fadeInLeft">
+    <section className="contact">
+    <div className="container">
+        <div className="contact__wrapper">
+            <h2 className="contact__title animate__animated animate__fadeInLeft">
                 Контакты
             </h2>
-            <div class="contact__info">
-                <h3 class="contact__subtitle animate__animated animate__fadeInDown">
+            <div className="contact__info">
+                <h3 className="contact__subtitle animate__animated animate__fadeInDown">
                     Местоположение
                 </h3>
-                <p class="contact__desk animate__animated animate__fadeInUp">
+                <p className="contact__desk animate__animated animate__fadeInUp">
                     Bishkek, Kyrgyzstan
                 </p>
-                <h3 class="contact__subtitle animate__animated animate__fadeInDown">
+                <h3 className="contact__subtitle animate__animated animate__fadeInDown">
                     Telegram / WhatsApp
                 </h3>
-                <a href="" class="contact__desk blue animate__animated animate__fadeInUp">
+                <a href="" className="contact__desk blue animate__animated animate__fadeInUp">
                     +996 221 158 535
                 </a>
-                <h3 class="contact__subtitle animate__animated animate__fadeInDown ">
+                <h3 className="contact__subtitle animate__animated animate__fadeInDown ">
                     Email
                 </h3>
-                <a href="" class="contact__desk blue animate__animated animate__fadeInUp">
+                <a href="" className="contact__desk blue animate__animated animate__fadeInUp">
                     luijulus@gmail.com
                 </a>
             </div>

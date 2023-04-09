@@ -1,27 +1,34 @@
-import React from 'react'
-import './Project.css'
+import React, {useState} from 'react'
 import Cards from '../components/card/Cards'
 import {projects} from '../helpers/projectList'
-import {categories} from '../helpers/categoriesList'
+import Pagination from '../components/Pagination'
 
-
-
+import './Project.css'
 
 const Project = () => {
+    const [currentPage, setCurrentPage] = useState(1)
+    const [cardPerPage] = useState(4)
+    
+    const lastCardIndex = currentPage * cardPerPage
+    const firstCardIndex = lastCardIndex - cardPerPage
+    const currentCard = projects.slice(firstCardIndex,lastCardIndex)
+
+    const paginate = pageNumber => setCurrentPage(pageNumber)
+
 
   return (
-    <section class="project">
-    <div class="container">
-        <div class="project__wrapper">
-            <div class="project__warpper-left">
-                <h2 class="project__title animate__animated animate__fadeInLeft">
+    <section className="project">
+    <div className="container">
+        <div className="project__wrapper">
+            <div className="project__warpper-left">
+                <h2 className="project__title animate__animated animate__fadeInLeft">
                     projects
                 </h2>
-                <div class="project__nav">
+                <div className="project__nav">
 
                  
 
-                    <a href="#" class="project__link">
+                    <a href="#" className="project__link">
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -57,7 +64,7 @@ const Project = () => {
 
 
                     </a>
-                    <a href="#" class="project__link">
+                    <a href="#" className="project__link">
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.25 6.25H93.75V93.75H6.25V6.25Z" fill="#F5DE19" />
@@ -67,7 +74,7 @@ const Project = () => {
                         </svg>
 
                     </a>
-                    <a href="#" class="project__link">
+                    <a href="#" className="project__link">
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_5631_18)">
@@ -97,12 +104,11 @@ const Project = () => {
                     </a>
                 </div>
             </div>
-            <div class="project__warpper-right">
-                <div class="project__carusel">
-                    {projects.map((el) => {
-                        return <Cards key={el.id} title={el.title} img={el.img} link={el.gitHubLink}/>
-                    })}
+            <div className="project__warpper-right">
+                <div className="project__carusel">   
+                    <Cards projects={currentCard}/>  
                 </div>
+                    <Pagination cardPerPage={cardPerPage} totalCard={projects.length} paginate={paginate}/>
             </div>
         </div>
     </div>

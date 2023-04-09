@@ -3,10 +3,12 @@ import Header from "./components/header/Header";
 import Main from "./pages/main/Main";
 import Project from "./pages/Project";
 import Contact from "./components/contact/Contact";
+import { projects } from "./helpers/projectList";
 
 
 
 const App = () => {
+ 
   return (
     <div className="App">
       <Router>
