@@ -18,6 +18,12 @@ import chaos from '../assets/img/chaosSlider.png'
 
 import trello from '../assets/img/trello.png'
 
+import konstruct from '../assets/img/konstract.png'
+
+import aim from '../assets/img/aimTraining.png'
+
+import miniGame from '../assets/img/miniGame.png'
+
 const projects = [
     {
         id: 1,
@@ -28,12 +34,12 @@ const projects = [
         gitHubLink: 'https://github.com/Ju1ustaan/local-storage-to-cart.git',
     },
     {
-        id:2,
-        title: 'Calculator',
-        skills: 'JavaScript, HTML, CSS',
-        img: calc,
-        imgBig: '',
-        gitHubLink: 'https://ju1ustaan.github.io/calculator-JL/',
+        id: 2,
+        title: 'Konstruct',
+        skills: 'HTML, CSS',
+        img: konstruct,
+        bigImg: '',
+        gitHubLink: 'https://ju1ustaan.github.io/Konstruct/',
     },
     {
         id: 3,
@@ -98,6 +104,30 @@ const projects = [
         img: trello,
         bigImg: '',
         gitHubLink: 'https://ju1ustaan.github.io/imitation-trello/',
+    },
+    {
+        id:11,
+        title: 'Calculator',
+        skills: 'JavaScript, HTML, CSS',
+        img: calc,
+        imgBig: '',
+        gitHubLink: 'https://ju1ustaan.github.io/calculator-JL/',
+    },
+    {
+        id: 12,
+        title: "Aim training",
+        skills: "JavaScript, HTML, CSS",
+        img: aim,
+        bigImg: '',
+        gitHubLink: 'https://ju1ustaan.github.io/Aim-training/',
+    },
+    {
+        id: 13,
+        title: "Mini-game",
+        skills: "JavaScript, HTML, CSS",
+        img: miniGame,
+        bigImg: '',
+        gitHubLink: 'https://ju1ustaan.github.io/mini-game/',
     }
 ]
 

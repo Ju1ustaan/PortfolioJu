@@ -3,7 +3,7 @@
     font-size: 16px;
 }
 .project__warpper-left {
-    padding: 100px 0 100px 70px;
+    padding: 3.75em 0 8em 70px;
     background-image: url("../assets/project__bg.png");
     background-size: cover;
     background-position: center;
@@ -24,14 +24,14 @@
     display: flex;
     flex-direction: column;
 }
-.project__link{
+.project__link:not(:last-child){
     margin-bottom: 45px;
 }
 .project__title-adaptive{
     display: none;
 }
 .project__warpper-right {
-    padding: 6.25em .625rem;
+    padding: 1.75em .625rem;
     width: 62.5%;
     background-color: #FFFAD0;
 }
