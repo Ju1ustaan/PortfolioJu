@@ -1,0 +1,152 @@
+@media (max-width:970px){
+    .container{
+       max-width: 970px;
+    }
+    .header__link {
+     font-size: .8em;
+    }
+
+    /* main  */
+    .main__wrapper{
+        font-size: .8em;
+    }
+    .main__btn{
+        font-size: .8em;
+    }
+    .main__desk::before{
+        width: 16.75rem;
+    }
+    .main__title{
+        min-width: 500px;
+    }
+
+    /* project  */
+    .project__wrapper{
+        font-size: .8em;
+    }
+    .project__warpper-left{
+        display: none;
+    }
+    .project__title-adaptive{
+        display: block;
+    }
+    .project__warpper-right{
+        width: 100%;
+    }
+
+    /* contact  */
+
+    .contact__wrapper{
+        font-size: .8em;
+    }
+    .contact__title{
+        line-height: 3.375rem;
+    }
+    .contact__subtitle{
+        line-height: 3.375rem;
+    }
+
+}
+
+
+
+
+@media (max-width:720px){
+    .container{
+       max-width: 720px;
+    }
+    .header__link {
+     font-size: .7em;
+    }
+
+    /* main  */
+
+    .main__desk::before{
+        width: 14.5rem;
+    }
+    .main__title{
+        min-width: 400px;
+    }
+
+    .main__wrapper{
+        font-size: .7em;
+    }
+
+
+    /* project  */
+
+    .project__wrapper{
+        font-size: .7em;
+    }
+    .project__title-adaptive{
+        margin-bottom: 3.68rem;
+        line-height: 5.8rem;
+    }
+
+
+    /* contact  */
+
+    .contact__wrapper{
+        font-size: .7em;
+    }
+    .contact__title{
+        line-height: 2.375rem;
+    }
+    .contact__subtitle{
+        line-height: 2.375rem;
+    }
+
+    
+
+}
+
+
+
+
+@media (max-width:570px){
+    .container{
+       max-width: 570px;
+    }
+    .header__link {
+     font-size: .6em;
+    }
+
+    /* main  */
+
+    .main__wrapper{
+        font-size: .5em;
+    }
+    .main__desk::before{
+        width: 10.5rem;
+    }
+    .main__title{
+        min-width: 300px;
+        line-height: 4.8rem;
+        margin-bottom: 2.68rem;
+    }
+    .project__title-adaptive{
+        margin-bottom: 2.68rem;
+        line-height: 4.8rem;
+    }
+
+
+    .project__wrapper{
+        font-size: .6em;
+    }
+
+
+    /* contact  */
+
+    .contact__wrapper{
+        font-size: .6em;
+    }
+    .contact__title{
+        line-height: 1.375rem;
+    }
+    .contact__subtitle{
+        line-height: 1.375rem;
+    }
+
+    
+
+}
