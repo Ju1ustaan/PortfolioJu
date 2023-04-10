@@ -11,7 +11,7 @@
         font-size: .8em;
     }
     .main__btn{
-        font-size: .8em;
+        font-size: 1rem;
     }
     .main__desk::before{
         width: 16.75rem;
@@ -60,16 +60,18 @@
     }
 
     /* main  */
-
+    
+    .main__wrapper{
+        font-size: .7em;
+    }
     .main__desk::before{
         width: 14.5rem;
     }
     .main__title{
         min-width: 400px;
     }
-
-    .main__wrapper{
-        font-size: .7em;
+    .main__btn{
+        font-size: 1rem;
     }
 
 
@@ -119,6 +121,9 @@
     .main__desk::before{
         width: 10.5rem;
     }
+    .main__btn{
+        font-size: 1rem;
+    }
     .main__title{
         min-width: 300px;
         line-height: 4.8rem;
@@ -163,7 +168,9 @@
     .main__desk::before {
         width: 8.3rem;
     }
-
+    .main__btn{
+        font-size: .7rem;
+    }
     .main__title {
         min-width: 209px;
         line-height: 3.8rem;

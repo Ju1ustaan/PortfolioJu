@@ -24,6 +24,8 @@ import aim from '../assets/img/aimTraining.png'
 
 import miniGame from '../assets/img/miniGame.png'
 
+import upDownSlider from '../assets/img/updownslider.png'
+
 const projects = [
     {
         id: 1,
@@ -128,6 +130,14 @@ const projects = [
         img: miniGame,
         bigImg: '',
         gitHubLink: 'https://ju1ustaan.github.io/mini-game/',
+    },
+    {
+        id: 14,
+        title: "Up down slider",
+        skills: "JavaScript, HTML, CSS",
+        img: upDownSlider,
+        bigImg: '',
+        gitHubLink: 'https://ju1ustaan.github.io/UpDownSlider/',
     }
 ]
 

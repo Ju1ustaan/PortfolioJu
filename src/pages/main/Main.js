@@ -14,9 +14,9 @@ const Main = () => {
                     <h1 className="main__title animate__animated animate__fadeInLeft">
                         Привет<span>,</span> меня зовут <span>Дьулустаан</span>
                     </h1>
-                    <button className="main__btn animate__animated animate__fadeInUp">
-                        cv 
-                    </button>
+                    {/* <button className="main__btn animate__animated animate__fadeInUp"> */}
+                        <a className="main__btn animate__animated animate__fadeInUp" href='https://drive.google.com/file/d/1j3sr7TVEPPjrAejW7RC5IRh2bnw_pzA1/view?usp=sharing' target='_blank'>cv</a> 
+                    {/* </button> */}
                 </div>
                 <div className="main__right-wrapper">
                     <div className="main__img">

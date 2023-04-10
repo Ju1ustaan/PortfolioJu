@@ -33,7 +33,10 @@
 .project__warpper-right {
     padding: 1.75em .625rem;
     width: 62.5%;
-    background-color: #FFFAD0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project__carusel {
