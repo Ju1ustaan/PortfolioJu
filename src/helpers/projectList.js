@@ -26,6 +26,8 @@ import miniGame from '../assets/img/miniGame.png'
 
 import upDownSlider from '../assets/img/updownslider.png'
 
+import pokemon from '../assets/img/pokemon.png'
+
 const projects = [
     {
         id: 1,
@@ -138,6 +140,14 @@ const projects = [
         img: upDownSlider,
         bigImg: '',
         gitHubLink: 'https://ju1ustaan.github.io/UpDownSlider/',
+    },
+    {
+        id: 15,
+        title: "PokemonApi",
+        skills: "React, Tailwind",
+        img: pokemon,
+        bigImg: '',
+        gitHubLink: 'https://pokemon-api-dusky.vercel.app/',
     }
 ]
 
