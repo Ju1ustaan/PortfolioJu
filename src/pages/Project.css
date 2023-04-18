@@ -19,6 +19,7 @@
     margin-bottom: 4.68rem;
     color: #2a2a2ae7;
     text-transform: capitalize;
+    cursor: pointer;
 }
 .project__nav{
     display: flex;

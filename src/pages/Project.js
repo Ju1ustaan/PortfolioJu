@@ -6,12 +6,63 @@ import Pagination from '../components/Pagination'
 import './Project.css'
 
 const Project = () => {
+    // филтрация 
+    const [filterData, setFilterData] = useState(projects)
+    // запуск html css 
+    
+    const handleOnRemove = () => {
+        if(projects.length !== filterData.length){
+            return setFilterData(projects)
+        }else{
+            const removeItemFromList = () => {
+                const newDataSet = filterData.filter((it) =>{
+                    return it.skills === 'HTML, CSS'
+                })
+                setFilterData(newDataSet)
+            }
+            removeItemFromList()
+        }
+
+    }
+    // запуск js 
+    const handleOnRemoveJs = () => {
+        if(projects.length !== filterData.length){
+            return setFilterData(projects)
+        }else{
+        const removeItemFromListJs = () => {
+            const newDataSet = filterData.filter((it) =>{
+                return it.skills === "JavaScript, HTML, CSS"
+            })
+            setFilterData(newDataSet)
+        }
+        removeItemFromListJs()
+    }
+    }
+    // Запуск реакт 
+    const handleOnRemoveReact = () => { 
+        if(projects.length !== filterData.length){
+            return setFilterData(projects)
+        }else{
+        const removeItemFromListReact = (()=> {
+            const newDataSet = filterData.filter((it) =>{
+                return it.skills === "React, Tailwind"
+            })
+            setFilterData(newDataSet)
+        })
+        removeItemFromListReact()
+    }
+    }
+    // запуск all 
+    const handleOnRemoveAll = () => {
+        setFilterData(projects)
+    }
+    // пагинация 
     const [currentPage, setCurrentPage] = useState(1)
     const [cardPerPage] = useState(4)
 
     const lastCardIndex = currentPage * cardPerPage
     const firstCardIndex = lastCardIndex - cardPerPage
-    const currentCard = projects.slice(firstCardIndex, lastCardIndex)
+    const currentCard = filterData.slice(firstCardIndex, lastCardIndex) // здесь вместо projects нужен отфильтрованный массив
 
     const paginate = pageNumber => setCurrentPage(pageNumber)
 
@@ -21,14 +72,14 @@ const Project = () => {
             <div className="container">
                 <div className="project__wrapper">
                     <div className="project__warpper-left">
-                        <h2 className="project__title animate__animated animate__fadeInLeft">
+                        <h2 className="project__title animate__animated animate__fadeInLeft" onClick={handleOnRemoveAll}>
                             projects
                         </h2>
                         <div className="project__nav">
 
 
 
-                            <a href="#" className="project__link">
+                            <a href="#" className="project__link" onClick={handleOnRemove}>
                                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -64,7 +115,7 @@ const Project = () => {
 
 
                             </a>
-                            <a href="#" className="project__link">
+                            <a href="#" className="project__link" onClick={handleOnRemoveJs}>
                                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.25 6.25H93.75V93.75H6.25V6.25Z" fill="#F5DE19" />
@@ -74,7 +125,7 @@ const Project = () => {
                                 </svg>
 
                             </a>
-                            <a href="#" className="project__link">
+                            <a href="#" className="project__link" onClick={handleOnRemoveReact}>
                                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_5631_18)">
@@ -109,9 +160,9 @@ const Project = () => {
                             Projects
                         </h2>
                         <div className="project__carusel">
-                            <Cards projects={currentCard} />
+                            <Cards projects={currentCard}/>
                         </div>
-                        <Pagination cardPerPage={cardPerPage} totalCard={projects.length} paginate={paginate} />
+                        <Pagination cardPerPage={cardPerPage} totalCard={filterData.length} paginate={paginate} />
                     </div>
                 </div>
             </div>

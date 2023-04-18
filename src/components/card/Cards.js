@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Cards.css'
 
-const Card = ({ projects }) => {
+const Cards = ({ projects }) => {
     return (
         <>
             {
@@ -27,4 +27,4 @@ const Card = ({ projects }) => {
     )
 }
 
-export default Card
+export default Cards
