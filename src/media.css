@@ -30,6 +30,10 @@
     .project__title-adaptive{
         display: block;
     }
+    .project__nav-mobile{
+        display: block;
+        display: flex;
+    }
     .project__warpper-right{
         width: 100%;
     }

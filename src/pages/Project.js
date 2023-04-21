@@ -8,51 +8,22 @@ import './Project.css'
 const Project = () => {
     // филтрация 
     const [filterData, setFilterData] = useState(projects)
-    // запуск html css 
-    
-    const handleOnRemove = () => {
-        if(projects.length !== filterData.length){
-            return setFilterData(projects)
-        }else{
-            const removeItemFromList = () => {
-                const newDataSet = filterData.filter((it) =>{
-                    return it.skills === 'HTML, CSS'
+
+    const handleOnRemove = (item) => {
+        if (projects.length !== filterData.length) {
+            setFilterData(projects)
+        } else {
+            const removeItemFromList = (item) => {
+                const newDataSet = filterData.filter((it) => {
+                    return it.skills === item
                 })
                 setFilterData(newDataSet)
             }
-            removeItemFromList()
+            removeItemFromList(item)
         }
+    }
 
-    }
-    // запуск js 
-    const handleOnRemoveJs = () => {
-        if(projects.length !== filterData.length){
-            return setFilterData(projects)
-        }else{
-        const removeItemFromListJs = () => {
-            const newDataSet = filterData.filter((it) =>{
-                return it.skills === "JavaScript, HTML, CSS"
-            })
-            setFilterData(newDataSet)
-        }
-        removeItemFromListJs()
-    }
-    }
-    // Запуск реакт 
-    const handleOnRemoveReact = () => { 
-        if(projects.length !== filterData.length){
-            return setFilterData(projects)
-        }else{
-        const removeItemFromListReact = (()=> {
-            const newDataSet = filterData.filter((it) =>{
-                return it.skills === "React, Tailwind"
-            })
-            setFilterData(newDataSet)
-        })
-        removeItemFromListReact()
-    }
-    }
-    // запуск all 
+    // all projects 
     const handleOnRemoveAll = () => {
         setFilterData(projects)
     }
@@ -62,7 +33,7 @@ const Project = () => {
 
     const lastCardIndex = currentPage * cardPerPage
     const firstCardIndex = lastCardIndex - cardPerPage
-    const currentCard = filterData.slice(firstCardIndex, lastCardIndex) // здесь вместо projects нужен отфильтрованный массив
+    const currentCard = filterData.slice(firstCardIndex, lastCardIndex)
 
     const paginate = pageNumber => setCurrentPage(pageNumber)
 
@@ -79,8 +50,8 @@ const Project = () => {
 
 
 
-                            <a href="#" className="project__link" onClick={handleOnRemove}>
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
+                            <a href="#" className="project__link" onClick={() => handleOnRemove('HTML, CSS')}>
+                                <svg width="90" height="90" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M18.4437 85.0031L11.4219 6.25H88.5781L81.5469 84.9906L49.9531 93.75L18.4437 85.0031Z"
@@ -93,7 +64,7 @@ const Project = () => {
                                         d="M49.9656 41.8969V51.5562H61.8594L60.7406 64.0844L49.9656 66.9906V77.0406L69.7688 71.55L69.9125 69.9187L72.1813 44.4906L72.4188 41.8969H49.9656ZM49.9656 22.3469V32.0062H73.2969L73.4906 29.8375L73.9313 24.9406L74.1625 22.3469H49.9656Z"
                                         fill="white" />
                                 </svg>
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
+                                <svg width="90" height="90" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M18.4437 85.0031L11.425 6.25H88.575L81.5469 84.9906L49.9531 93.75L18.4437 85.0031Z"
@@ -115,8 +86,8 @@ const Project = () => {
 
 
                             </a>
-                            <a href="#" className="project__link" onClick={handleOnRemoveJs}>
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
+                            <a href="#" className="project__link" onClick={() => handleOnRemove('JavaScript, HTML, CSS')}>
+                                <svg width="90" height="90" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.25 6.25H93.75V93.75H6.25V6.25Z" fill="#F5DE19" />
                                     <path
@@ -125,8 +96,8 @@ const Project = () => {
                                 </svg>
 
                             </a>
-                            <a href="#" className="project__link" onClick={handleOnRemoveReact}>
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
+                            <a href="#" className="project__link" onClick={() => handleOnRemove('React, Tailwind')}>
+                                <svg width="90" height="90" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_5631_18)">
                                         <path
@@ -156,11 +127,18 @@ const Project = () => {
                         </div>
                     </div>
                     <div className="project__warpper-right">
-                        <h2 class="project__title project__title-adaptive">
+                        <h2 class="project__title-adaptive" onClick={handleOnRemoveAll} >
                             Projects
                         </h2>
+                        <div className='project__mobile'>
+                            <ul className='project__nav-mobile'>
+                                <li className='project__link-mobile' onClick={() => handleOnRemove('HTML, CSS')}>Верстка</li>
+                                <li className='project__link-mobile' onClick={() => handleOnRemove('JavaScript, HTML, CSS')}>Java Script</li>
+                                <li className='project__link-mobile' onClick={() => handleOnRemove('React, Tailwind')}>React</li>
+                            </ul>
+                        </div>
                         <div className="project__carusel">
-                            <Cards projects={currentCard}/>
+                            <Cards projects={currentCard} />
                         </div>
                         <Pagination cardPerPage={cardPerPage} totalCard={filterData.length} paginate={paginate} />
                     </div>
