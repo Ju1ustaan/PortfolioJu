@@ -1,88 +1,27 @@
-.project__wrapper {
-    display: flex;
-    font-size: 16px;
-}
-.project__warpper-left {
-    padding: 3.75em 0 8em .625rem;
-    background-image: url("../assets/project__bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 37.5%;
-}
-.project__link{
-    
-    max-width: 200px;
-    border-radius: 5px;
-    padding: 10px;
-}
-.project__link:hover{
-    background-color: #FFFAD0;
-    transform: translate(0,2px);
-}
-.project__title {
-    font-family: 'Roboto Condensed', sans-serif;
+.project__title{
+    font-size: 1.5em;
+    margin-bottom: .5em;
     font-weight: 700;
-    font-size: 7.87em;
-    line-height: 7.8rem;
-    letter-spacing: -0.05em;
-    margin-bottom: 4.68rem;
-    color: #2a2a2ae7;
-    text-transform: capitalize;
-    cursor: pointer;
-}
-.project__nav{
-    display: flex;
-    flex-direction: column;
-}
-.project__link:not(:last-child){
-    margin-bottom: 45px;
-}
-.project__title-adaptive{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 4em;
-    line-height: 4rem;
-    letter-spacing: -0.05em;
-    color: #2a2a2ae7;
-    text-transform: capitalize;
-    cursor: pointer;
-    display: none;
-}
-.project__warpper-right {
-    padding: 1.75em .625rem;
-    width: 62.5%;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+    -webkit-text-stroke: 1px #ffffff;
+    color: var(--accent);
+    animation: fadeInDown 2s;
 
-.project__carusel {
+}
+.projects__cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25em;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5em;
+    animation: fadeInLeft 2s;
 }
 
-.project__nav-mobile{
-    padding: 1.75em 0;
-    display: none;
+.active__paginate{
+    list-style: none;
+    opacity: 1;
+    color: #ffffff;
 }
-.project__link-mobile{
-    font-family: 'Roboto Condensed';
-    font-weight: 700;
-    font-size: 2em;
-    line-height: 1.625em;
-    text-transform: capitalize;
-    cursor: pointer;
-}
-.project__link-mobile:not(:last-child){
-    margin-right: 1em;
-}
-
-
-
-
+.active__paginate:not(:last-child){
+    margin-right: 40px;
+  }
 
 
 

@@ -1,0 +1,37 @@
+.about__wrapper {
+    position: relative;
+    padding: 3em 0;
+    text-align: center;
+}
+
+.about__wrapper::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    opacity: .3;
+    z-index: -1;
+    border-radius: 1.5em;
+}
+
+.about__title {
+    -webkit-text-stroke: 1px #ffffff;
+    color: var(--accent);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    animation: fadeInLeft 2s;
+}
+
+.about__text {
+    color: var(--about-text);
+    font-size: 1em;
+    margin-bottom: 1em;
+    animation: fadeInDown 2s;
+}
+
+.about__text span{
+    color: blue;
+}

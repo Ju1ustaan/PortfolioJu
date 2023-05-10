@@ -1,17 +1,8 @@
+/* portfolio v2.0  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: #FFFAD0;
-  font-size: 16px;
-}
-
-button {
-  border: none;
-  background-color: transparent;
 }
 
 a {
@@ -19,14 +10,42 @@ a {
   color: inherit;
 }
 
-li {
-  list-style: none;
+button {
+  border: none;
+  background-color: transparent;
 }
 
-.container {
-  max-width: 1470px;
-  padding: 0 15px;
-  margin: 0 auto;
+
+body {
+  height: 100vh;
+  background: url('./assets/cool__bg__day.jpg') no-repeat bottom;
+  background-size: cover;
+  font-family: 'Montserrat Alternates', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  font-size: 24px;
+}
+:root{
+  --green: #159386;
+  --black: #404040;
+  --blue: #49a5f0;
+  --yellow: #c4f54f;
+  --btn-gradient: linear-gradient(135deg, rgba(196, 245, 79, 1) 2%, rgba(21, 147, 134, 1) 56%);
+  --purple: #724cab;
+  --white: #ffffff;
+
+
+  --accent: var(--green);
+  --color-link:var(--blue);
+  --about-text: var(--black);
+  --main-btn: var(--yellow);
+  --main-btn-gradient: var(--btn-gradient)
+}
+.night {
+  background: url('./assets/cool__bg__night.jpg') no-repeat bottom;
+  background-size: cover;
 }
 
 
@@ -39,10 +58,11 @@ li {
 }
 
 .pagination__number {
-  font-family: 'Gilroy-Medium';
+  list-style: none;
   font-size: 24px;
-  color: blueviolet;
+  color: var(--accent);
   position: relative;
+  opacity: .5;
   z-index: 10;
 }
 .pagination__number:not(:last-child){
