@@ -51,6 +51,85 @@
     }
 }
 
+@media (max-width:450px) {
+    body{
+        height: 159.5vh;
+    }
+    .container {
+        max-width: 450px;
+    }
+
+    .x1 {
+        animation: moveclouds1 15s linear infinite;
+        animation: moveclouds2 15s linear infinite;
+        animation: moveclouds3 15s linear infinite;
+    }
+    
+    /*variable speed, opacity, and position of clouds for realistic effect*/
+    .x2 {
+        left: 100px;
+        
+        -webkit-transform: scale(0.6);
+        -moz-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 0.6; 
+        animation: moveclouds1 25s linear infinite;
+        animation: moveclouds2 25s linear infinite;
+        animation: moveclouds3 25s linear infinite;
+    }
+    
+    .x3 {
+        left: -120px; top: -400px;
+        
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0.8; /*opacity proportional to the size*/
+        
+        animation: moveclouds1 20s linear infinite;
+        animation: moveclouds2 20s linear infinite;
+        animation: moveclouds3 20s linear infinite;
+    }
+    
+    .x4 {
+        left: 100px; top: -500px;
+        
+        -webkit-transform: scale(0.75);
+        -moz-transform: scale(0.75);
+        transform: scale(0.75);
+        opacity: 0.75; /*opacity proportional to the size*/
+        
+        animation: moveclouds1 18s linear infinite;
+        animation: moveclouds2 18s linear infinite;
+        animation: moveclouds3 18s linear infinite;
+    }
+    
+    .x5 {
+        left: 70px; top: -50px;
+        
+        -webkit-transform: scale(.8);
+        -moz-transform: scale(.8);
+        transform: scale(.8);
+        opacity: 0.8; /*opacity proportional to the size*/
+        
+        animation: moveclouds1 10s linear infinite;
+        animation: moveclouds2 10s linear infinite;
+        animation: moveclouds3 10s linear infinite;
+    }
+    @keyframes moveclouds1 {
+        0% {margin-left: 400px;}
+        100% {margin-left: -400px;}
+    }
+    @keyframes moveclouds2 {
+        0% {margin-left: 400px;}
+        100% {margin-left: -400px;}
+    }
+    @keyframes moveclouds3 {
+        0% {margin-left: 400px;}
+        100% {margin-left: -400px;}
+    }
+}
+
 @media (max-width:320px) {
    
     .container {
