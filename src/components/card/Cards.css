@@ -8,7 +8,9 @@
 
 .projects__card:hover {
     animation-duration: 1s;
+    transform: scale(1.3);
     opacity: 1;
+    z-index: 100;
 }
 
 .projects__image {
