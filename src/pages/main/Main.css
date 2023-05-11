@@ -2,9 +2,10 @@
     color: var(--accent);
     font-size: 1.5em;
     margin-bottom: 1em;
-    font-weight: 300;
+    font-weight: 500;
     min-width: 1200px;
     animation: fadeInDown 2s;
+    -webkit-text-stroke: 1px var(--green);
 }
 
 .main__text {

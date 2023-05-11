@@ -15,24 +15,29 @@ button {
   background-color: transparent;
 }
 
-
 body {
   height: 100vh;
-  background: url('./assets/cool__bg__day.jpg') no-repeat bottom;
+  background: var(--bg-image-light) no-repeat bottom;
   background-size: cover;
   font-family: 'Montserrat Alternates', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
   font-size: 24px;
 }
+/* body{
+  background: transparent;
+} */
+
 :root{
   --green: #159386;
   --black: #404040;
   --blue: #49a5f0;
   --yellow: #c4f54f;
+  --bg-image-light: url('./assets/cool__bg__day.jpg');
+  --bg-image-night: url('./assets/cool__bg__night.jpg');
   --btn-gradient: linear-gradient(135deg, rgba(196, 245, 79, 1) 2%, rgba(21, 147, 134, 1) 56%);
+  --btn-gradient-night: linear-gradient(135deg, rgba(117,67,156,1) 10%, rgba(21,147,134,1) 59%);
   --purple: #724cab;
   --white: #ffffff;
 
@@ -44,8 +49,11 @@ body {
   --main-btn-gradient: var(--btn-gradient)
 }
 .night {
-  background: url('./assets/cool__bg__night.jpg') no-repeat bottom;
-  background-size: cover;
+  background: var(--bg-image-night) no-repeat bottom;
+  background-size:  cover;
+  --color-link:var(--purple);
+  --about-text: var(--white);
+  --main-btn-gradient: var(--btn-gradient-night)
 }
 
 

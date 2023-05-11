@@ -1,6 +1,7 @@
 import React from 'react'
-import './Header.css'
 import { NavLink } from 'react-router-dom'
+import BtnDarkmode from '../btnDarkMode/BtnDarkmode'
+import './Header.css'
 
 const Header = () => {
     return (
@@ -23,10 +24,9 @@ const Header = () => {
                         <NavLink to="/contact" className="header__link">Контакты</NavLink>
                         <NavLink to="/about" className="header__link">О себе</NavLink>
                     </nav>
-                    <label id="switch" className="switch">
-                        <input type="checkbox" id="slider" />
-                        <span className="slider round"></span>
-                    </label>
+
+                    <BtnDarkmode />
+                    
                 </div>
             </div>
         </header>

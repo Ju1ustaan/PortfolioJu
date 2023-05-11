@@ -24,8 +24,3 @@ const Pagination = ({ cardPerPage, totalCard, paginate }) => {
 }
 
 export default Pagination
-
-
- // {
-    //     cats.map((obj) => <li onClick={() => setActiveCategory(obj.name)} className={activeCategory === obj.name ? "active mr-5 font-extrabold" : "mr-5 hover:text-blue-600 hover:shadow-inner cursor-pointer"} key={obj.name}>{obj.title}</li>)
-    //   }
