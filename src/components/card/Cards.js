@@ -7,13 +7,13 @@ const Cards = ({ projects }) => {
         <>
             {
                 projects.map((el) => (
-                    <div class="projects__card">
-                        <div class="projects__image">
+                    <div className="projects__card">
+                        <div className="projects__image">
                             <img src={el.img} alt={el.title}/>
                         </div>
-                        <p class="projects__text">{el.title}</p>
-                        <button class="projects__btn">
-                            <a class="projects__btn" href={projects.gitHubLink} target='_blank'>Смотреть</a>
+                        <p className="projects__text">{el.title}</p>
+                        <button className="projects__btn">
+                            <a className="projects__btn" rel="noreferrer" href={el.gitHubLink} target='_blank'>Смотреть</a>
                         </button>
                     </div>
                 ))
